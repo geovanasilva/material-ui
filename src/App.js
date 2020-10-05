@@ -1,11 +1,14 @@
 import React from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
-function App() {
+export default function App() {
   return (
-    <h1>
-      Curso Material UI
-    </h1>
+    <div>
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 }
-
-export default App;
