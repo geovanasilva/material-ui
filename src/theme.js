@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import Image from './assets/background.svg';
+import PlanoDeFundo from './assets/planodefundo.svg';
 
 const theme = createMuiTheme({
     palette: {
@@ -27,7 +27,7 @@ const theme = createMuiTheme({
       MuiCssBaseline: {
         "@global": {
           body: {
-            backgroundImage: `url(${Image})`,
+            backgroundImage: `url(${PlanoDeFundo})`,
             backgroundSize: 'cover',
           }
         }

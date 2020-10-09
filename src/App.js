@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Cabecalho from './components/Cabecalho';
+import Conteudo from './components/Conteudo';
+import Rodape from './components/Rodape';
 
 export default function App() {
   return (
     <div>
-      <Header />
-      <Main />
-      <Footer />
+      <Cabecalho />
+      <Conteudo />
+      <Rodape />
     </div>
   );
 }
