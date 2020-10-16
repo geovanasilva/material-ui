@@ -18,17 +18,16 @@ export default function Cabecalho() {
         <Grid item xs={1}></Grid>
         <Grid
           container
-          xs={8}
           direction="row"
-          justify="space-between"
+          justify="space-around"
           alignItems="center"
           justifyContent="flex-end"
           className={classes.margin}
         >
-          <Grid item xs={2}>
+          <Grid item xs={4}>
             <img src={Logo} alt="Logo" />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={4}>
             <Breadcrumbs aria-label="breadcrumb">
               <Typography color="textPrimary">Como fazer</Typography>
               <Typography color="textPrimary">Ofertas</Typography>
