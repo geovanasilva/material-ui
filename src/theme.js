@@ -21,6 +21,14 @@ const theme = createMuiTheme({
         h3: {
             fontFamily: 'Elsie Swash Caps',
             fontWeight: 900,
+        },
+        h4: {
+            fontFamily: 'Elsie Swash Caps',
+            fontWeight: 900,
+        },
+        h5: {
+            fontFamily: 'Elsie Swash Caps',
+            fontWeight: 900,
         }
     },
     overrides: {
