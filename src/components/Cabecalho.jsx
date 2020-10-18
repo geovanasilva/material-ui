@@ -5,8 +5,8 @@ import Logo from "../assets/logo.svg";
 import { Breadcrumbs, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: "20px 0px",
+  root: {
+    margin: "20px 0",
   },
 }));
 
@@ -14,30 +14,24 @@ export default function Cabecalho() {
   const classes = useStyles();
   return (
     <header>
-      <Grid container spacing={3}>
-        <Grid item xs={1}></Grid>
-        <Grid
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-          justifyContent="flex-end"
-          className={classes.margin}
-        >
-          <Grid item xs={4}>
-            <img src={Logo} alt="Logo" />
-          </Grid>
-          <Grid item xs={4}>
-            <Breadcrumbs aria-label="breadcrumb">
-              <Typography color="textPrimary">Como fazer</Typography>
-              <Typography color="textPrimary">Ofertas</Typography>
-              <Typography color="textPrimary">Depoimentos</Typography>
-              <Typography color="textPrimary">Videos</Typography>
-              <Typography color="textPrimary">Meu carrinho</Typography>
-            </Breadcrumbs>
-          </Grid>
+      <Grid
+        container
+        justify="space-around"
+        alignItems="center"
+        className={classes.root}
+      >
+        <Grid item>
+          <img src={Logo} alt="Logo" />
         </Grid>
-        <Grid item xs={1}></Grid>
+        <Grid item>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Typography color="textPrimary">Como fazer</Typography>
+            <Typography color="textPrimary">Ofertas</Typography>
+            <Typography color="textPrimary">Depoimentos</Typography>
+            <Typography color="textPrimary">Videos</Typography>
+            <Typography color="textPrimary">Meu carrinho</Typography>
+          </Breadcrumbs>
+        </Grid>
       </Grid>
     </header>
   );

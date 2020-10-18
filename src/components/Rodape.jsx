@@ -6,20 +6,21 @@ import Jardineira from "../assets/jardineira.svg";
 import Facebook from "../assets/facebook.svg";
 import Twitter from "../assets/twitter.svg";
 import Instagram from "../assets/instagram.svg";
+import Footer from '../assets/footer.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: '30px',
-    background: "white",
+    backgroundImage: `url(${Footer})`,
+    height: "309px",
+    padding: "50px 200px 0 200px",
+  },
+  iconesSociais: {
+    marginTop: "20px",
+    marginRight: "20px",
   },
   jardineira: {
     position: "relative",
-    left: "30px",
     bottom: "100px",
-  },
-  iconesSociais: {
-    marginTop: '20px',
-    marginRight: '20px'
   }
 }));
 
@@ -27,17 +28,28 @@ export default function Rodape() {
   const classes = useStyles();
   return (
     <footer>
-      <Grid container spacing={3} className={classes.root}>
-        <Grid item xs={1}></Grid>
-        <Grid item xs={2}>
+      <Grid container justify="space-around" className={classes.root}>
+        <Grid item>
           <img src={Logo} alt="Logo" />
           <Box>
-            <img src={Facebook} alt="Facebook" className={classes.iconesSociais}/>
-            <img src={Twitter} alt="Twitter" className={classes.iconesSociais}/>
-            <img src={Instagram} alt="Instagram" className={classes.iconesSociais}/>
+            <img
+              src={Facebook}
+              alt="Facebook"
+              className={classes.iconesSociais}
+            />
+            <img
+              src={Twitter}
+              alt="Twitter"
+              className={classes.iconesSociais}
+            />
+            <img
+              src={Instagram}
+              alt="Instagram"
+              className={classes.iconesSociais}
+            />
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item>
           <Typography variant="body2">
             <Box fontWeight={400}>Rio de Janeiro</Box>
           </Typography>
@@ -46,7 +58,7 @@ export default function Rodape() {
           </Typography>
           <Typography variant="body2">Telefone: (21) 99876-0099</Typography>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item>
           <Typography variant="body2">
             <Box fontWeight={400}>São Paulo</Box>
           </Typography>
@@ -55,10 +67,9 @@ export default function Rodape() {
           </Typography>
           <Typography variant="body2">Telefone: (11) 99875-2201</Typography>
         </Grid>
-        <Grid item xs={2} className={classes.jardineira}>
-          <img src={Jardineira} alt="Jardineira" />
+        <Grid item className={classes.jardineira}>
+          <img src={Jardineira} alt="Jardineira"/>
         </Grid>
-        <Grid item xs={1}></Grid>
       </Grid>
     </footer>
   );

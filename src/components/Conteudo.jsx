@@ -6,6 +6,9 @@ import Formulario from "./Formulario";
 import ResumoDoPedido from "./ResumoDoPedido";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: "0px 40px",
+  },
   botao: {
     borderRadius: 0,
     boxShadow: "10px 10px 30px rgba(255,203,71, 0.5)",
@@ -23,25 +26,17 @@ export default function Conteudo() {
   const classes = useStyles();
   return (
     <main>
-      <Grid container spacing={3}>
-        <Grid item xs={1}></Grid>
-        <Grid container xs={8} direction="row" justify="space-between">
-          <Grid item xs={6}>
-            <Carrinho />
-            <Formulario />
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.botao}
-            >
-              Finalizar Pagamento
-            </Button>
-          </Grid>
-          <Grid item xs={2}>
-            <ResumoDoPedido />
-          </Grid>
+      <Grid container justify="space-around" className={classes.root}>
+        <Grid item xs={3}>
+          <Carrinho />
+          <Formulario />
+          <Button variant="contained" color="primary" className={classes.botao}>
+            Finalizar Pagamento
+          </Button>
         </Grid>
-        <Grid item xs={1}></Grid>
+        <Grid item>
+          <ResumoDoPedido />
+        </Grid>
       </Grid>
     </main>
   );
