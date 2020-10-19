@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Box } from "@material-ui/core";
 import Logo from "../assets/logo.svg";
-import Jardineira from "../assets/jardineira.svg";
 import Facebook from "../assets/facebook.svg";
 import Twitter from "../assets/twitter.svg";
 import Instagram from "../assets/instagram.svg";
@@ -18,10 +17,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "20px",
     marginRight: "20px",
   },
-  jardineira: {
-    position: "relative",
-    bottom: "100px",
-  }
 }));
 
 export default function Rodape() {
@@ -66,9 +61,6 @@ export default function Rodape() {
             Rua Anita Garibaldi, 33, 13 Sé
           </Typography>
           <Typography variant="body2">Telefone: (11) 99875-2201</Typography>
-        </Grid>
-        <Grid item className={classes.jardineira}>
-          <img src={Jardineira} alt="Jardineira"/>
         </Grid>
       </Grid>
     </footer>
