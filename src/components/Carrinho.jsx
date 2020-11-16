@@ -5,9 +5,26 @@ import Carrinho from "../assets/carrinho.svg";
 
 const useStyles = makeStyles((theme) => ({
   carrinhoInfo: {
+    alignItems: 'center',
+    display: 'flex',
     marginBottom: theme.spacing(6),
     marginTop: theme.spacing(2),
-    width: 600,
+    width: 550,
+  },
+  carrinhoContainer: {
+    alignItems: 'center',
+    background: '#FFCB47',
+    borderRadius: '50%',
+    display: 'flex',
+    height: '40px',
+    justifyContent: 'center',
+    marginRight: theme.spacing(2),
+    width: '110px',
+  },
+  carrinho: {
+    borderRadius: 0,
+    height: '20px',
+    width: '20px',
   },
   opacidade: {
     opacity: 0.5,
@@ -27,14 +44,11 @@ export default function Form() {
       <Grid
         container
         direction="row"
-        justify="center"
-        alignItems="center"
         wrap="nowrap"
-        spacing={3}
         className={classes.carrinhoInfo}
       >
-        <Grid item>
-          <Avatar src={Carrinho} />
+        <Grid item className={classes.carrinhoContainer}>
+          <Avatar src={Carrinho} className={classes.carrinho}></Avatar>
         </Grid>
         <Grid item>
           <Typography className={classes.opacidade}>

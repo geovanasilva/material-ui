@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   botao: {
     borderRadius: 0,
-    boxShadow: "10px 10px 30px rgba(255,203,71, 0.5)",
+    boxShadow: "10px 10px 30px rgba(255, 203,71, 0.5)",
     color: "white",
     fontSize: 12,
     fontWeight: 700,

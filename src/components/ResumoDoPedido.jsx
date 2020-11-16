@@ -30,7 +30,7 @@ export default function ResumodePedido() {
             <p>Taxa de entrega</p>
             <p>R$10,00</p>
           </Box>
-          <Box display="flex" justifyContent="space-between">
+          <Box fontWeight={900} display="flex" justifyContent="space-between">
             <p>Subtotal</p>
             <p>R$70,00</p>
           </Box>

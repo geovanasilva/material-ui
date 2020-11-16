@@ -5,17 +5,16 @@ import Logo from "../assets/logo.svg";
 import Facebook from "../assets/facebook.svg";
 import Twitter from "../assets/twitter.svg";
 import Instagram from "../assets/instagram.svg";
-import Footer from '../assets/footer.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${Footer})`,
-    height: "309px",
+    background: "white",
+    height: "250px",
     padding: "50px 200px 0 200px",
   },
   iconesSociais: {
-    marginTop: "20px",
     marginRight: "20px",
+    marginTop: "20px",
   },
 }));
 
@@ -45,21 +44,15 @@ export default function Rodape() {
           </Box>
         </Grid>
         <Grid item>
-          <Typography variant="body2">
-            <Box fontWeight={400}>Rio de Janeiro</Box>
-          </Typography>
-          <Typography variant="body2">
-            Rua Siqueira Campos, 171, 303 Copacabana
-          </Typography>
+          <Typography variant="body1">Rio de Janeiro</Typography>
+          <Typography variant="body2">Rua Siqueira Campos, 171, 303</Typography>
+          <Typography variant="body2">Copacabana</Typography>
           <Typography variant="body2">Telefone: (21) 99876-0099</Typography>
         </Grid>
         <Grid item>
-          <Typography variant="body2">
-            <Box fontWeight={400}>São Paulo</Box>
-          </Typography>
-          <Typography variant="body2">
-            Rua Anita Garibaldi, 33, 13 Sé
-          </Typography>
+          <Typography variant="body1">São Paulo</Typography>
+          <Typography variant="body2">Rua Anita Garibaldi, 33, 13</Typography>
+          <Typography variant="body2">Sé</Typography>
           <Typography variant="body2">Telefone: (11) 99875-2201</Typography>
         </Grid>
       </Grid>
