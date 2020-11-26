@@ -16,8 +16,8 @@ export default function ResumodePedido() {
     <div>
       <Card className={classes.cartao}>
         <CardContent>
-          <Typography variant="h3">
-            <Box fontSize={20}>Resumo do pedido</Box>
+          <Typography variant="h3" fontSize={20}>
+            Resumo do pedido
           </Typography>
           <ItemPedido />
           <ItemPedido />

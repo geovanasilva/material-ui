@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import { Typography, Box, FormControl, InputBase } from "@material-ui/core";
+import { Typography, Box, InputBase } from "@material-ui/core";
 
 const Input = withStyles((theme) => ({
   input: {
@@ -13,8 +13,9 @@ const Input = withStyles((theme) => ({
 }))(InputBase);
 
 const useStyles = makeStyles((theme) => ({
-  tituloMargin: {
+  titulos: {
     marginTop: theme.spacing(3),
+    fontSize: 30,
   },
 }));
 
@@ -22,85 +23,57 @@ export default function Form() {
   const classes = useStyles();
   return (
     <div>
-      <Typography variant="h3" className={classes.tituloMargin}>
-        <Box fontSize={30}>Informações</Box>
+      <Typography variant="h3" className={classes.titulos}>
+        Informações
       </Typography>
       <form>
         <Box display="flex" flexDirection="column">
-          <FormControl>
-            <Input placeholder="Nome" />
-          </FormControl>
-          <FormControl>
-            <Input placeholder="E-mail" />
-          </FormControl>
+          <Input placeholder="Nome" />
+          <Input placeholder="E-mail" />
         </Box>
       </form>
-      <Typography variant="h3" className={classes.tituloMargin}>
-        <Box fontSize={30}>Endereço de entrega</Box>
+      <Typography variant="h3" className={classes.titulos}>
+        Endereço de entrega
       </Typography>
       <form>
         <Box display="flex" flexDirection="column">
-          <FormControl>
-            <Input placeholder="CEP" />
-          </FormControl>
-          <FormControl>
-            <Input placeholder="Rua / Avenida" />
-          </FormControl>
+          <Input placeholder="CEP" />
+          <Input placeholder="Rua / Avenida" />
           <Box
             display="flex"
             flexDirection="row"
             justifyContent="space-between"
           >
-            <FormControl>
-              <Input placeholder="Número" />
-            </FormControl>
-            <FormControl>
-              <Input placeholder="Complemento" />
-            </FormControl>
+            <Input placeholder="Número" />
+            <Input placeholder="Complemento" />
           </Box>
           <Box
             display="flex"
             flexDirection="row"
             justifyContent="space-between"
           >
-            <FormControl>
-              <Input placeholder="Cidade" />
-            </FormControl>
-            <FormControl>
-              <Input placeholder="Estado" />
-            </FormControl>
+            <Input placeholder="Cidade" />
+            <Input placeholder="Estado" />
           </Box>
         </Box>
       </form>
-      <Typography variant="h3" className={classes.tituloMargin}>
-        <Box fontSize={30}>Pagamento</Box>
+      <Typography variant="h3" className={classes.titulos}>
+        Pagamento
       </Typography>
       <form>
         <Box display="flex" flexDirection="column">
-          <FormControl>
-            <Input placeholder="Número do cartão" />
-          </FormControl>
-          <FormControl>
-            <Input placeholder="Nome do títular do cartão" />
-          </FormControl>
+          <Input placeholder="Número do cartão" />
+          <Input placeholder="Nome do títular do cartão" />
           <Box
             display="flex"
             flexDirection="row"
             justifyContent="space-between"
           >
-            <FormControl>
-              <Input placeholder="Validade" />
-            </FormControl>
-            <FormControl>
-              <Input placeholder="CVV" />
-            </FormControl>
+            <Input placeholder="Validade" />
+            <Input placeholder="CVV" />
           </Box>
-          <FormControl>
-            <Input placeholder="CPF do titular do cartão" />
-          </FormControl>
-          <FormControl>
-            <Input placeholder="Número de parcelas" />
-          </FormControl>
+          <Input placeholder="CPF do titular do cartão" />
+          <Input placeholder="Número de parcelas" />
         </Box>
       </form>
     </div>

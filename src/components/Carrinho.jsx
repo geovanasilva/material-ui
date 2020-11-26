@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   opacidade: {
     opacity: 0.5,
   },
-  primeiroTituloMargin: {
+  primeiroTitulo: {
     marginTop: theme.spacing(6),
   },
 }));
@@ -38,7 +38,7 @@ export default function Form() {
   const classes = useStyles();
   return (
     <div>
-      <Typography variant="h3" className={classes.primeiroTituloMargin}>
+      <Typography variant="h3" className={classes.primeiroTitulo}>
         <Box fontSize={30}>Finalizar pedido</Box>
       </Typography>
       <Grid

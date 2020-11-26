@@ -7,7 +7,7 @@ import Twitter from "../assets/twitter.svg";
 import Instagram from "../assets/instagram.svg";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  rodape: {
     background: "white",
     height: "250px",
     padding: "50px 200px 0 200px",
@@ -22,7 +22,7 @@ export default function Rodape() {
   const classes = useStyles();
   return (
     <footer>
-      <Grid container justify="space-around" className={classes.root}>
+      <Grid container justify="space-around" className={classes.rodape}>
         <Grid item>
           <img src={Logo} alt="Logo" />
           <Box>

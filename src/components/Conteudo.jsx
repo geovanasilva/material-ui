@@ -6,7 +6,7 @@ import Formulario from "./Formulario";
 import ResumoDoPedido from "./ResumoDoPedido";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  espacamento: {
     padding: "0px 40px",
   },
   botao: {
@@ -26,7 +26,7 @@ export default function Conteudo() {
   const classes = useStyles();
   return (
     <main>
-      <Grid container justify="space-around" className={classes.root}>
+      <Grid container justify="space-around" className={classes.espacamento}>
         <Grid item xs={3}>
           <Carrinho />
           <Formulario />

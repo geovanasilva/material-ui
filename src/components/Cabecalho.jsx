@@ -5,7 +5,7 @@ import Logo from "../assets/logo.svg";
 import { Breadcrumbs, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  margem: {
     margin: "20px 0",
   },
 }));
@@ -18,7 +18,7 @@ export default function Cabecalho() {
         container
         justify="space-around"
         alignItems="center"
-        className={classes.root}
+        className={classes.margem}
       >
         <Grid item>
           <img src={Logo} alt="Logo" />
