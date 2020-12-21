@@ -6,10 +6,10 @@ import Formulario from "./Formulario";
 import ResumoDoPedido from "./ResumoDoPedido";
 
 const useStyles = makeStyles((theme) => ({
-  espacamento: {
+  espacamentoConteudo: {
     padding: "0px 40px",
   },
-  botao: {
+  botaoFinalizarPagamento: {
     borderRadius: 0,
     boxShadow: "10px 10px 30px rgba(255, 203,71, 0.5)",
     color: "white",
@@ -26,11 +26,11 @@ export default function Conteudo() {
   const classes = useStyles();
   return (
     <main>
-      <Grid container justify="space-around" className={classes.espacamento}>
+      <Grid container justify="space-around" className={classes.espacamentoConteudo}>
         <Grid item xs={3}>
           <Carrinho />
           <Formulario />
-          <Button variant="contained" color="primary" className={classes.botao}>
+          <Button variant="contained" color="primary" className={classes.botaoFinalizarPagamento}>
             Finalizar Pagamento
           </Button>
         </Grid>

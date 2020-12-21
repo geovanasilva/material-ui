@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Card, CardContent, Typography, Box } from "@material-ui/core";
+import { Grid, Card, CardContent, Typography } from "@material-ui/core";
 import ItemPedido from "./ItemPedido";
 
 const useStyles = makeStyles((theme) => ({
@@ -8,6 +8,12 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 500,
     minWidth: 400,
   },
+  subtotal: {
+    fontWeight: 900
+  },
+  resumoPedido: {
+    fontSize: 25,
+  }
 }));
 
 export default function ResumodePedido() {
@@ -16,24 +22,36 @@ export default function ResumodePedido() {
     <div>
       <Card className={classes.cartao}>
         <CardContent>
-          <Typography variant="h3" fontSize={20}>
+          <Typography variant="h3" className={classes.resumoPedido}>
             Resumo do pedido
           </Typography>
           <ItemPedido />
           <ItemPedido />
           <ItemPedido />
-          <Box display="flex" justifyContent="space-between">
-            <p>Valor dos produtos</p>
-            <p>R$60,00</p>
-          </Box>
-          <Box display="flex" justifyContent="space-between">
-            <p>Taxa de entrega</p>
-            <p>R$10,00</p>
-          </Box>
-          <Box fontWeight={900} display="flex" justifyContent="space-between">
-            <p>Subtotal</p>
-            <p>R$70,00</p>
-          </Box>
+          <Grid container>
+            <Grid item xs={10}>
+              <p>Valor dos produtos</p>
+            </Grid>
+            <Grid item>
+              <p>R$60,00</p>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs={10}>
+              <p>Taxa de entrega</p>
+            </Grid>
+            <Grid item>
+              <p>R$10,00</p>
+            </Grid>
+          </Grid>
+          <Grid container className={classes.subtotal}>
+            <Grid item xs={10}>
+              <p>Subtotal</p>
+            </Grid>
+            <Grid item>
+              <p>R$70,00</p>
+            </Grid>
+          </Grid>
         </CardContent>
       </Card>
     </div>

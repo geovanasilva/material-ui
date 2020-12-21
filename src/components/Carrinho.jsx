@@ -1,17 +1,17 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Avatar, Box } from "@material-ui/core";
+import { Grid, Typography, Avatar } from "@material-ui/core";
 import Carrinho from "../assets/carrinho.svg";
 
 const useStyles = makeStyles((theme) => ({
-  carrinhoInfo: {
+  carrinhoContainer: {
     alignItems: 'center',
     display: 'flex',
     marginBottom: theme.spacing(6),
     marginTop: theme.spacing(2),
     width: 550,
   },
-  carrinhoContainer: {
+  iconeCarrinhoContainer: {
     alignItems: 'center',
     background: '#FFCB47',
     borderRadius: '50%',
@@ -21,16 +21,18 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     width: '110px',
   },
-  carrinho: {
+  iconeCarrinho: {
     borderRadius: 0,
     height: '20px',
     width: '20px',
   },
-  opacidade: {
+  descricaoCarrinho: {
+    fontSize: 14,
     opacity: 0.5,
   },
   primeiroTitulo: {
     marginTop: theme.spacing(6),
+    fontSize: 30,
   },
 }));
 
@@ -39,24 +41,22 @@ export default function Form() {
   return (
     <div>
       <Typography variant="h3" className={classes.primeiroTitulo}>
-        <Box fontSize={30}>Finalizar pedido</Box>
+        Finalizar pedido
       </Typography>
       <Grid
         container
         direction="row"
         wrap="nowrap"
-        className={classes.carrinhoInfo}
+        className={classes.carrinhoContainer}
       >
-        <Grid item className={classes.carrinhoContainer}>
-          <Avatar src={Carrinho} className={classes.carrinho}></Avatar>
+        <Grid item className={classes.iconeCarrinhoContainer}>
+          <Avatar src={Carrinho} className={classes.iconeCarrinho}></Avatar>
         </Grid>
         <Grid item>
-          <Typography className={classes.opacidade}>
-            <Box fontSize={14}>
+          <Typography className={classes.descricaoCarrinho}>
               Insira suas informações abaixo e você receberá um e-mail com os
               detalhes da sua compra. Assim que o pagamento for processado você
               receberá seu produto em sua casa em até 7 dias úteis.
-            </Box>
           </Typography>
         </Grid>
       </Grid>

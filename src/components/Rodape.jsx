@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Box } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Logo from "../assets/logo.svg";
 import Facebook from "../assets/facebook.svg";
 import Twitter from "../assets/twitter.svg";
@@ -25,7 +25,7 @@ export default function Rodape() {
       <Grid container justify="space-around" className={classes.rodape}>
         <Grid item>
           <img src={Logo} alt="Logo" />
-          <Box>
+          <Grid>
             <img
               src={Facebook}
               alt="Facebook"
@@ -41,7 +41,7 @@ export default function Rodape() {
               alt="Instagram"
               className={classes.iconesSociais}
             />
-          </Box>
+          </Grid>
         </Grid>
         <Grid item>
           <Typography variant="body1">Rio de Janeiro</Typography>

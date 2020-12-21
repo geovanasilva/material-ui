@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import { Typography, Box, InputBase } from "@material-ui/core";
+import { Grid, Typography, InputBase } from "@material-ui/core";
 
 const Input = withStyles((theme) => ({
   input: {
@@ -27,54 +27,64 @@ export default function Form() {
         Informações
       </Typography>
       <form>
-        <Box display="flex" flexDirection="column">
-          <Input placeholder="Nome" />
-          <Input placeholder="E-mail" />
-        </Box>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Input placeholder="Nome" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <Input placeholder="E-mail" fullWidth />
+          </Grid>
+        </Grid>
       </form>
       <Typography variant="h3" className={classes.titulos}>
         Endereço de entrega
       </Typography>
       <form>
-        <Box display="flex" flexDirection="column">
-          <Input placeholder="CEP" />
-          <Input placeholder="Rua / Avenida" />
-          <Box
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-between"
-          >
-            <Input placeholder="Número" />
-            <Input placeholder="Complemento" />
-          </Box>
-          <Box
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-between"
-          >
-            <Input placeholder="Cidade" />
-            <Input placeholder="Estado" />
-          </Box>
-        </Box>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Input placeholder="CEP" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <Input placeholder="Rua / Avenida" fullWidth />
+          </Grid>
+          <Grid item xs={6}>
+            <Input placeholder="Número" fullWidth />
+          </Grid>
+          <Grid item xs={6}>
+            <Input placeholder="Complemento" fullWidth />
+          </Grid>
+          <Grid item xs={6}>
+            <Input placeholder="Cidade" fullWidth />
+          </Grid>
+          <Grid item xs={6}>
+            <Input placeholder="Estado" fullWidth />
+          </Grid>
+        </Grid>
       </form>
       <Typography variant="h3" className={classes.titulos}>
         Pagamento
       </Typography>
       <form>
-        <Box display="flex" flexDirection="column">
-          <Input placeholder="Número do cartão" />
-          <Input placeholder="Nome do títular do cartão" />
-          <Box
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-between"
-          >
-            <Input placeholder="Validade" />
-            <Input placeholder="CVV" />
-          </Box>
-          <Input placeholder="CPF do titular do cartão" />
-          <Input placeholder="Número de parcelas" />
-        </Box>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Input placeholder="Número do cartão" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <Input placeholder="Nome do títular do cartão" fullWidth />
+          </Grid>
+          <Grid item xs={6}>
+            <Input placeholder="Validade" fullWidth />
+          </Grid>
+          <Grid item xs={6}>
+            <Input placeholder="CVV" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <Input placeholder="CPF do titular do cartão" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <Input placeholder="Número de parcelas" fullWidth />
+          </Grid>
+        </Grid>
       </form>
     </div>
   );
